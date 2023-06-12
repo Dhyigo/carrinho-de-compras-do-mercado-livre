@@ -1,1 +1,0 @@
-# carrinho-de-compras-do-mercado-livre
