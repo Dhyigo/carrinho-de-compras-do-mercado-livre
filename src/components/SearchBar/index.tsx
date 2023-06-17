@@ -1,8 +1,9 @@
 import { BsSearch } from 'react-icons/bs';
+import './style.css';
 
 export const SearchBar = () => {
   return (
-    <form>
+    <form className="search-bar">
       <input 
         type="search"
         placeholder="Buscar produtos"
