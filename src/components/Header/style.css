@@ -1,6 +1,7 @@
 .header {
   background-color: var(--color-primary);
   position: fixed;
+  width: 100%;
 }
 
 .header > div {
