@@ -6,10 +6,14 @@ import { Loading } from '../Loading';
 
 export const Products = () => {
   const [products, setProducts] = useState([] as TProduct[]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const getProducts = async () => {
+      setLoading(true);
+
       const products = await fetchProducts('iPhone');
+      setLoading(false);
 
       setProducts(products);
     };
@@ -18,11 +22,13 @@ export const Products = () => {
   }, []);
   
   return (
-    <section className="products container">
-      <Loading />
-      {
-        products.map((product) => (<ProductCard key={product.id} data={product}/>))
-      }
-    </section>
+    (loading && <Loading />) || (
+      <section className="products container">
+        {
+          products.map((product) => (<ProductCard key={product.id} data={product}/>))
+        }
+      </section>
+    )
+    
   );
 };
