@@ -1,3 +1,4 @@
 import { BiLoaderAlt } from 'react-icons/bi';
+import './style.css';
 
-const Loading = () => <BiLoaderAlt className />;
+export const Loading = () => <BiLoaderAlt className="loading" />;
