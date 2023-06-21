@@ -13,9 +13,8 @@ export const Products = () => {
       setLoading(true);
 
       const products = await fetchProducts('iPhone');
-      setLoading(false);
-
       setProducts(products);
+      setLoading(false);
     };
 
     getProducts();
