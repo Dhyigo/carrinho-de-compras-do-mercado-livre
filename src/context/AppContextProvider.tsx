@@ -15,7 +15,7 @@ export const AppContextProvider = ({ children }: TAppContextProviderProps) => {
     setProducts,
     loading,
     setLoading
-  }), []);
+  }), [products, loading]);
   
   return (
     <AppContext.Provider value={value}>
