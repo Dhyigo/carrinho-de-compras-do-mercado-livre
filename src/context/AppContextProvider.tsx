@@ -9,12 +9,17 @@ type TAppContextProviderProps = {
 export const AppContextProvider = ({ children }: TAppContextProviderProps) => {
   const [products, setProducts] = useState([] as TProduct[]);
   const [loading, setLoading] = useState(false);
+  const [cartItems, setCartItems] = useState([] as TProduct[]);
 
   const value = useMemo(() => ({
     products,
     setProducts,
+
     loading,
-    setLoading
+    setLoading,
+
+    cartItems,
+    setCartItems
   }), [products, loading]);
   
   return (
