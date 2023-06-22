@@ -1,4 +1,4 @@
-import { memo, useContext, useEffect } from 'react';
+import { useContext, useEffect } from 'react';
 
 import { fetchProducts } from '../../services/api/fetchProducts';
 import { ProductCard } from '../ProductCard';
