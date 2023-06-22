@@ -20,7 +20,7 @@ export const AppContextProvider = ({ children }: TAppContextProviderProps) => {
 
     cartItems,
     setCartItems
-  }), [products, loading]);
+  }), [products, loading, cartItems]);
   
   return (
     <AppContext.Provider value={value}>
