@@ -8,7 +8,7 @@ type TAppContext = {
   loading: boolean;
   setLoading: (isLoading: boolean) => void;
 
-  cartItem: TProduct[];
+  cartItems: TProduct[];
   setCartItems: (product: TProduct[]) => void;
 }
 
