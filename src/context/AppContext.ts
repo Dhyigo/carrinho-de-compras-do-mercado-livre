@@ -10,6 +10,9 @@ type TAppContext = {
 
   cartItems: TProduct[];
   setCartItems: Dispatch<SetStateAction<TProduct[]>>;
+
+  isCartVisible: boolean;
+  setCartVisible: (visible: boolean) => void;
 }
 
 export const AppContext = createContext({} as TAppContext);
