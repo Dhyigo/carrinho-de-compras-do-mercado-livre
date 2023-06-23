@@ -10,6 +10,7 @@ export const AppContextProvider = ({ children }: TAppContextProviderProps) => {
   const [products, setProducts] = useState([] as TProduct[]);
   const [loading, setLoading] = useState(false);
   const [cartItems, setCartItems] = useState([] as TProduct[]);
+  const [isCartVisible, setIsCartVisible] = useState(false);
 
   const value = useMemo(() => ({
     products,
@@ -19,8 +20,11 @@ export const AppContextProvider = ({ children }: TAppContextProviderProps) => {
     setLoading,
 
     cartItems,
-    setCartItems
-  }), [products, loading, cartItems]);
+    setCartItems,
+
+    isCartVisible,
+    setIsCartVisible
+  }), [products, loading, cartItems, isCartVisible]);
   
   return (
     <AppContext.Provider value={value}>
